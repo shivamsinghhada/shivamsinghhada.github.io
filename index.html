@@ -47,8 +47,10 @@
   }
   header img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 180px;            /* size of the circle */
+    height: auto;            /* keep the natural ratio */
+    aspect-ratio: 1 / 1;     /* ensure perfect circle crop */
+    object-fit: cover;       /* crop evenly instead of stretching */
     margin-top: 1rem;
     border: 3px solid #cfd8e5;
     position: relative;
@@ -151,20 +153,20 @@
 <section id="publications">
   <h2>Publications</h2>
   <ol>
-    <li><a href="#">Role of large-scale climate oscillations in precipitation extremes associated with atmospheric rivers: nonstationary framework.</a> <strong>Singh, S.</strong>, Goyal, M.K. & Jha S. (2023) Hydrological Sciences Journal.</li>
-    <li><a href="#">Enhancing climate resilience in businesses: The role of artificial intelligence.</a> <strong>Singh, S.</strong> & Goyal, M.K. (2023) Journal of Cleaner Production.</li>
-    <li><a href="#">An innovative approach to predict atmospheric rivers: Exploring convolutional autoencoder.</a> <strong>Singh, S.</strong> & Goyal, M.K. (2023) Atmospheric Research.</li>
-    <li><a href="#">Univariate and bivariate spatiotemporal characteristics of heat waves and climate oscillations over India.</a> <strong>Singh, S.</strong>, Yadav A. & Goyal, M.K. (2024) Journal of Hydrology.</li>
-    <li><a href="#">Relative influence of ENSO, IOD, and AMO on hydroclimatic extremes in Narmada basin.</a> <strong>Singh, S.</strong>, Kumar N., Goyal, M.K. & Jha S. (2023) AQUA – Water Infrastructure Ecosystems and Society.</li>
-    <li><a href="#">Assessing Climate Vulnerability of Ramsar Wetlands through CMIP6 Projections.</a> <strong>Singh, S.</strong>, Goyal, M.K., & Saikumar E. (2024) Water Resources Management.</li>
-    <li><a href="#">Sedimentation analysis for a reservoir using remote sensing and GIS techniques.</a> <strong>Singh, S.</strong>, Prasad B., & Tiwari, H.L. (2021) ISH Journal of Hydraulic Engineering.</li>
-    <li><a href="#">Predicting the spatiotemporal characteristics of atmospheric rivers: A novel data-driven approach.</a> Meghani, S., <strong>Singh, S.</strong>, Kumar, N. & Goyal, M.K. (2023) Global and Planetary Change.</li>
-    <li><a href="#">Understanding non-stationarity of hydroclimatic extremes and resilience in Peninsular catchments.</a> Kumar, N., Patel, P., <strong>Singh, S.</strong> & Goyal, M.K. (2023) Scientific Reports (Nature).</li>
-    <li><a href="#">Spatiotemporal analysis of Imja Lake to estimate downstream flood hazard using the SHIVEK approach.</a> Gupta V., Rakkasagi S., Rajpoot S., El Immanni H. S. & <strong>Singh, S.</strong> (2023) Acta Geophysica.</li>
-    <li><a href="#">Heat waves characteristics intensification across Indian smart cities.</a> Goyal, M.K., <strong>Singh, S.</strong> & Jain, V. (2023) Scientific Reports (Nature).</li>
-    <li><a href="#">Characterizing the spatiotemporal distribution and prediction of aerosol atmospheric rivers globally.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Journal of Environmental Management.</li>
-    <li><a href="#">Aerosol atmospheric rivers: patterns, impacts, and societal insights.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Environmental Science and Pollution Research.</li>
-    <li><a href="#">Resilience to Air Pollution: A Novel Approach for Detecting and Predicting Aerosol Atmospheric Rivers.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Earth Systems and Environment.</li>
+    <li><a href="https://doi.org/10.1080/02626667.2022.2159412">Role of large-scale climate oscillations in precipitation extremes associated with atmospheric rivers: nonstationary framework.</a> <strong>Singh, S.</strong>, Goyal, M.K. & Jha S. (2023) Hydrological Sciences Journal.</li>
+    <li><a href="https://doi.org/10.1016/j.jclepro.2023.138228">Enhancing climate resilience in businesses: The role of artificial intelligence.</a> <strong>Singh, S.</strong> & Goyal, M.K. (2023) Journal of Cleaner Production.</li>
+    <li><a href="https://doi.org/10.1016/j.atmosres.2023.106754">An innovative approach to predict atmospheric rivers: Exploring convolutional autoencoder.</a> <strong>Singh, S.</strong> & Goyal, M.K. (2023) Atmospheric Research.</li>
+    <li><a href="https://doi.org/10.1016/j.jhydrol.2023.130596">Univariate and bivariate spatiotemporal characteristics of heat waves and climate oscillations over India.</a> <strong>Singh, S.</strong>, Yadav A. & Goyal, M.K. (2024) Journal of Hydrology.</li>
+    <li><a href="https://doi.org/10.2166/aqua.2023.219">Relative influence of ENSO, IOD, and AMO on hydroclimatic extremes in Narmada basin.</a> <strong>Singh, S.</strong>, Kumar N., Goyal, M.K. & Jha S. (2023) AQUA – Water Infrastructure Ecosystems and Society.</li>
+    <li><a href="https://doi.org/10.1007/s11269-023-03726-3">Assessing Climate Vulnerability of Ramsar Wetlands through CMIP6 Projections.</a> <strong>Singh, S.</strong>, Goyal, M.K., & Saikumar E. (2024) Water Resources Management.</li>
+    <li><a href="https://doi.org/10.1080/09715010.2021.1975318">Sedimentation analysis for a reservoir using remote sensing and GIS techniques.</a> <strong>Singh, S.</strong>, Prasad B., & Tiwari, H.L. (2021) ISH Journal of Hydraulic Engineering.</li>
+    <li><a href="https://doi.org/10.1016/j.gloplacha.2023.104295">Predicting the spatiotemporal characteristics of atmospheric rivers: A novel data-driven approach.</a> Meghani, S., <strong>Singh, S.</strong>, Kumar, N. & Goyal, M.K. (2023) Global and Planetary Change.</li>
+    <li><a href="https://doi.org/10.1038/s41598-023-38771-w">Understanding non-stationarity of hydroclimatic extremes and resilience in Peninsular catchments.</a> Kumar, N., Patel, P., <strong>Singh, S.</strong> & Goyal, M.K. (2023) Scientific Reports (Nature).</li>
+    <li><a href="http://dx.doi.org/10.1007/s11600-023-01124">Spatiotemporal analysis of Imja Lake to estimate downstream flood hazard using the SHIVEK approach.</a> Gupta V., Rakkasagi S., Rajpoot S., El Immanni H. S. & <strong>Singh, S.</strong> (2023) Acta Geophysica.</li>
+    <li><a href="https://doi.org/10.1038/s41598-023-41968-8">Heat waves characteristics intensification across Indian smart cities.</a> Goyal, M.K., <strong>Singh, S.</strong> & Jain, V. (2023) Scientific Reports (Nature).</li>
+    <li><a href="https://doi.org/10.1016/j.jenvman.2023.119675">Characterizing the spatiotemporal distribution and prediction of aerosol atmospheric rivers globally.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Journal of Environmental Management.</li>
+    <li><a href="https://doi.org/10.1007/s11356-024-34625-8">Aerosol atmospheric rivers: patterns, impacts, and societal insights.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Environmental Science and Pollution Research.</li>
+    <li><a href="https://doi.org/10.1007/s41748-024-00421-0">Resilience to Air Pollution: A Novel Approach for Detecting and Predicting Aerosol Atmospheric Rivers.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Earth Systems and Environment.</li>
     <li><a href="#">Generative Adversarial Networks for Downscaling Hourly Precipitation in the Canadian Prairies.</a> Abdelmoaty, M.H., Papalexiou, S.M., Mamalakis, A., <strong>Singh, S.</strong>, et al. (2025) JGR - Machine Learning and Computation (Under Review).</li>
     <li><a href="#">Correcting Dry/Wet Classification Bias in Precipitation Downscaling via Generative Adversarial Networks.</a> <strong>Singh, S.</strong>, Abdelmoaty, M.H., Papalexiou, S.M., Hartvigsen, T., & Mamalakis, A. (2025) Environmental Data Science (Under Review).</li>
   </ol>
