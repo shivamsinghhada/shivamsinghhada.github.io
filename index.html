@@ -4,8 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Shivam Singh | AI for Climate Research</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -39,74 +42,233 @@
     font-size: 2.4rem;
     position: relative;
     z-index: 1;
+    font-weight: 700;
   }
   header p {
     margin: 0.4rem 0;
     position: relative;
     z-index: 1;
+    font-size: 1.05rem;
   }
   header img {
     border-radius: 50%;
-    width: 180px;            /* size of the circle */
-    height: auto;            /* keep the natural ratio */
-    aspect-ratio: 1 / 1;     /* ensure perfect circle crop */
-    object-fit: cover;       /* crop evenly instead of stretching */
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     margin-top: 1rem;
-    border: 3px solid #cfd8e5;
+    border: 4px solid #cfd8e5;
     position: relative;
     z-index: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
-  main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  .header-buttons {
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  section {
-    margin-bottom: 2.5rem;
-  }
-  h2 {
-    color: #2f4f6f;
-    border-bottom: 2px solid #a3b6c9;
-    display: inline-block;
-    padding-bottom: 0.3rem;
-  }
-  a {
-    color: #2f6fb0;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  ul { margin-top: 0.5rem; }
-  li { margin-bottom: 0.4rem; }
   .cv-btn {
     display: inline-block;
     background: #2f6fb0;
     color: white;
-    padding: 0.7rem 1.2rem;
-    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
-  .cv-btn:hover { background: #24588d; }
+  .cv-btn:hover { 
+    background: #24588d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-decoration: none;
+  }
+  .secondary-btn {
+    background: #6b8ba8;
+  }
+  .secondary-btn:hover {
+    background: #566f87;
+  }
+  main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  section {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  h2 {
+    color: #2f4f6f;
+    border-bottom: 3px solid #a3b6c9;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  h3 {
+    color: #3a5f7f;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef4 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #d4dde6;
+  }
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2f6fb0;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.3rem;
+  }
+  a {
+    color: #2f6fb0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  a:hover {
+    color: #24588d;
+    text-decoration: underline;
+  }
+  ul { 
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+  li { 
+    margin-bottom: 0.6rem;
+  }
+  .publication-item {
+    margin-bottom: 1.2rem;
+    padding-left: 0.5rem;
+    line-height: 1.7;
+  }
+  .pub-authors {
+    color: #333;
+  }
+  .pub-venue {
+    color: #555;
+    font-style: italic;
+  }
+  .pub-year {
+    font-weight: 600;
+    color: #2f6fb0;
+  }
+  .first-author {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border-left: 4px solid #2f6fb0;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 6px;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .skill-category {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #6b8ba8;
+  }
+  .skill-category h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2f4f6f;
+    font-size: 1.05rem;
+  }
+  .skill-category ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .skill-category li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+  }
+  .award-item {
+    background: #fffbf0;
+    border-left: 4px solid #f4b942;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 6px;
+  }
+  .award-item strong {
+    color: #2f4f6f;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background: #f8fafc;
+    border-radius: 8px;
+  }
+  .contact-icon {
+    font-size: 1.4rem;
+  }
   footer {
     text-align: center;
     background-color: #d4dae3;
-    padding: 1.2rem;
+    padding: 1.5rem;
     font-size: 0.9rem;
     color: #333;
+    margin-top: 3rem;
+  }
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    section {
+      padding: 1.5rem;
+    }
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Shivam Singh | AI for Climate Research</h1>
-  <p>Postdoctoral Research Associate, University of Virginia</p>
-  <p>Generative AI for Climate Downscaling & Hydroclimatic Extremes</p>
+  <h1>Shivam Singh</h1>
+  <p><strong>Postdoctoral Research Associate</strong></p>
+  <p>University of Virginia | Department of Environmental Sciences</p>
+  <p>AI-Driven Climate Modeling • Precipitation Downscaling • Hydroclimatic Extremes</p>
   <img src="image/me.jpeg" alt="Profile photo of Shivam Singh">
-  <div style="margin-top:1rem;">
+  <div class="header-buttons">
     <a class="cv-btn" href="My_CV__Shivam.pdf" target="_blank">📄 Download CV</a>
+    <a class="cv-btn secondary-btn" href="https://scholar.google.com/citations?hl=en&user=q4zIJZsAAAAJ" target="_blank">📚 Google Scholar</a>
+    <a class="cv-btn secondary-btn" href="https://github.com/shivamsinghhada" target="_blank">💻 GitHub</a>
   </div>
 </header>
 
@@ -115,19 +277,111 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am a Postdoctoral Research Associate at the <strong>University of Virginia</strong>, focusing on AI-driven
-    climate modeling and hydroclimatic risk. My work integrates <strong>deep learning</strong> and
-    <strong>physical principles</strong> to improve precipitation downscaling, bias correction, and
-    climate risk quantification. I aim to bridge AI and climate science for sustainable adaptation
-    and resilience planning.
+    I am a Postdoctoral Research Associate at the <strong>University of Virginia</strong>, specializing in the 
+    intersection of artificial intelligence and climate science. My research leverages <strong>generative AI</strong>, 
+    <strong>deep learning</strong>, and <strong>physics-informed models</strong> to address critical challenges in 
+    climate prediction and adaptation. I focus on developing novel methodologies for precipitation downscaling, 
+    bias correction, and quantifying hydroclimatic risks in a changing climate.
+  </p>
+  <p>
+    My work bridges computational innovation with environmental sustainability, aiming to provide actionable insights 
+    for climate resilience planning and disaster risk reduction. I collaborate with interdisciplinary teams to translate 
+    cutting-edge AI research into practical solutions for water resources management and climate adaptation strategies.
   </p>
 </section>
 
+<section id="research-impact">
+  <h2>Research Impact</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-number">18</span>
+      <div class="stat-label">Peer-Reviewed Publications</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">400+</span>
+      <div class="stat-label">Total Citations</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">10</span>
+      <div class="stat-label">h-index</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">3</span>
+      <div class="stat-label">Book Chapters</div>
+    </div>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.95rem; color: #555;">
+    Publications in high-impact journals including <em>Nature Scientific Reports</em>, <em>Journal of Hydrology</em>, 
+    <em>Atmospheric Research</em>, and <em>Journal of Geophysical Research</em>.
+  </p>
+</section>
+
+<section id="interests">
+  <h2>Research Focus</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h4>🤖 AI & Machine Learning</h4>
+      <ul>
+        <li>Generative Adversarial Networks (GANs)</li>
+        <li>Convolutional Autoencoders</li>
+        <li>Physics-Informed Neural Networks</li>
+        <li>Deep Learning for Climate</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h4>🌍 Climate Science</h4>
+      <ul>
+        <li>Precipitation Downscaling</li>
+        <li>Atmospheric Rivers Detection</li>
+        <li>Climate Change Impacts</li>
+        <li>Extreme Weather Events</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h4>💧 Hydrology & Risk</h4>
+      <ul>
+        <li>Hydrologic Extremes Analysis</li>
+        <li>Bias Correction Methods</li>
+        <li>Climate Risk Modeling</li>
+        <li>Water Resource Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="technical-skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h4>Programming & Tools</h4>
+      <ul>
+        <li>Python (TensorFlow, PyTorch, Keras)</li>
+        <li>R, MATLAB</li>
+        <li>GIS (ArcGIS, QGIS)</li>
+        <li>Climate Data Operators (CDO)</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h4>Climate Models & Data</h4>
+      <ul>
+        <li>CMIP6 Climate Projections</li>
+        <li>ERA5 Reanalysis Data</li>
+        <li>Regional Climate Models</li>
+        <li>Satellite Remote Sensing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section id="education">
-  <h2>Academic Background</h2>
+  <h2>Education</h2>
   <ul>
-    <li><strong>Ph.D. in Civil Engineering</strong>, Indian Institute of Technology Indore (2019–2023)</li>
-    <li><strong>M.Tech in Civil Engineering</strong>, Maulana Azad National Institute of Technology Bhopal (2017–2019)</li>
+    <li><strong>Ph.D. in Civil Engineering</strong>, Indian Institute of Technology Indore (2019–2023)
+      <br><em>Dissertation: Understanding Atmospheric Rivers — Characterization, Impacts, and Predictability</em>
+    </li>
+    <li><strong>M.Tech in Civil Engineering</strong>, Maulana Azad National Institute of Technology Bhopal (2017–2019)
+      <br><em>Thesis: Sedimentation Analysis for a Reservoir Using Remote Sensing and GIS</em>
+    </li>
     <li><strong>B.Tech in Civil Engineering</strong>, Maulana Azad National Institute of Technology Bhopal (2013–2017)</li>
   </ul>
 </section>
@@ -135,83 +389,212 @@
 <section id="experience">
   <h2>Professional Experience</h2>
   <ul>
-    <li><strong>Postdoctoral Research Associate</strong>, University of Virginia (Aug 2024 – Present)</li>
-    <li><strong>Project Associate I</strong>, IIT Indore (Jul 2023 – Jul 2024)</li>
-  </ul>
-</section>
-
-<section id="interests">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Generative AI for Climate and Hydrology</li>
-    <li>Precipitation Downscaling and Bias Correction</li>
-    <li>Hydroclimatic Extremes and Atmospheric Rivers</li>
-    <li>Climate Change and Risk Modeling</li>
+    <li>
+      <strong>Postdoctoral Research Associate</strong>, University of Virginia (August 2024 – Present)
+      <br><em>Focus: Generative AI for climate downscaling and hydroclimatic risk assessment</em>
+    </li>
+    <li>
+      <strong>Project Associate I</strong>, Indian Institute of Technology Indore (July 2023 – July 2024)
+      <br><em>Research on atmospheric rivers and climate extremes using machine learning</em>
+    </li>
   </ul>
 </section>
 
 <section id="publications">
-  <h2>Publications</h2>
-  <ol>
-    <li><a href="https://doi.org/10.1080/02626667.2022.2159412">Role of large-scale climate oscillations in precipitation extremes associated with atmospheric rivers: nonstationary framework.</a> <strong>Singh, S.</strong>, Goyal, M.K. & Jha S. (2023) Hydrological Sciences Journal.</li>
-    <li><a href="https://doi.org/10.1016/j.jclepro.2023.138228">Enhancing climate resilience in businesses: The role of artificial intelligence.</a> <strong>Singh, S.</strong> & Goyal, M.K. (2023) Journal of Cleaner Production.</li>
-    <li><a href="https://doi.org/10.1016/j.atmosres.2023.106754">An innovative approach to predict atmospheric rivers: Exploring convolutional autoencoder.</a> <strong>Singh, S.</strong> & Goyal, M.K. (2023) Atmospheric Research.</li>
-    <li><a href="https://doi.org/10.1016/j.jhydrol.2023.130596">Univariate and bivariate spatiotemporal characteristics of heat waves and climate oscillations over India.</a> <strong>Singh, S.</strong>, Yadav A. & Goyal, M.K. (2024) Journal of Hydrology.</li>
-    <li><a href="https://doi.org/10.2166/aqua.2023.219">Relative influence of ENSO, IOD, and AMO on hydroclimatic extremes in Narmada basin.</a> <strong>Singh, S.</strong>, Kumar N., Goyal, M.K. & Jha S. (2023) AQUA – Water Infrastructure Ecosystems and Society.</li>
-    <li><a href="https://doi.org/10.1007/s11269-023-03726-3">Assessing Climate Vulnerability of Ramsar Wetlands through CMIP6 Projections.</a> <strong>Singh, S.</strong>, Goyal, M.K., & Saikumar E. (2024) Water Resources Management.</li>
-    <li><a href="https://doi.org/10.1080/09715010.2021.1975318">Sedimentation analysis for a reservoir using remote sensing and GIS techniques.</a> <strong>Singh, S.</strong>, Prasad B., & Tiwari, H.L. (2021) ISH Journal of Hydraulic Engineering.</li>
-    <li><a href="https://doi.org/10.1016/j.gloplacha.2023.104295">Predicting the spatiotemporal characteristics of atmospheric rivers: A novel data-driven approach.</a> Meghani, S., <strong>Singh, S.</strong>, Kumar, N. & Goyal, M.K. (2023) Global and Planetary Change.</li>
-    <li><a href="https://doi.org/10.1038/s41598-023-38771-w">Understanding non-stationarity of hydroclimatic extremes and resilience in Peninsular catchments.</a> Kumar, N., Patel, P., <strong>Singh, S.</strong> & Goyal, M.K. (2023) Scientific Reports (Nature).</li>
-    <li><a href="http://dx.doi.org/10.1007/s11600-023-01124">Spatiotemporal analysis of Imja Lake to estimate downstream flood hazard using the SHIVEK approach.</a> Gupta V., Rakkasagi S., Rajpoot S., El Immanni H. S. & <strong>Singh, S.</strong> (2023) Acta Geophysica.</li>
-    <li><a href="https://doi.org/10.1038/s41598-023-41968-8">Heat waves characteristics intensification across Indian smart cities.</a> Goyal, M.K., <strong>Singh, S.</strong> & Jain, V. (2023) Scientific Reports (Nature).</li>
-    <li><a href="https://doi.org/10.1016/j.jenvman.2023.119675">Characterizing the spatiotemporal distribution and prediction of aerosol atmospheric rivers globally.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Journal of Environmental Management.</li>
-    <li><a href="https://doi.org/10.1007/s11356-024-34625-8">Aerosol atmospheric rivers: patterns, impacts, and societal insights.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Environmental Science and Pollution Research.</li>
-    <li><a href="https://doi.org/10.1007/s41748-024-00421-0">Resilience to Air Pollution: A Novel Approach for Detecting and Predicting Aerosol Atmospheric Rivers.</a> Rautela, K.S., <strong>Singh, S.</strong> & Goyal, M.K. (2024) Earth Systems and Environment.</li>
-    <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025JH000678">Generative Adversarial Networks for Downscaling Hourly Precipitation in the Canadian Prairies.</a> Abdelmoaty, M.H., Papalexiou, S.M., Mamalakis, A., <strong>Singh, S.</strong>, et al. (2025) JGR - Machine Learning and Computation (Under Review).</li>
-    <li><a href="#">Correcting Dry/Wet Classification Bias in Precipitation Downscaling via Generative Adversarial Networks.</a> <strong>Singh, S.</strong>, Abdelmoaty, M.H., Papalexiou, S.M., Hartvigsen, T., & Mamalakis, A. (2025) Environmental Data Science (Under Review).</li>
-  </ol>
+  <h2>Selected Publications</h2>
+  
+  <h3>First Author Publications (Recent)</h3>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2025)</span> <span class="pub-authors"><strong>Singh, S.</strong>, Papalexiou, S. M., Abdelmoaty, M. H., Hartvigsen, T., & Mamalakis, A.</span> 
+    Comprehensive Inter-comparison of Generative AI Models for Super-Resolution Precipitation Downscaling Across Hydroclimatic Regimes. 
+    <span class="pub-venue">Geoscientific Model Development</span> (Under review).
+  </div>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2025)</span> <span class="pub-authors"><strong>Singh, S.</strong>, Papalexiou, S. M., Abdelmoaty, M. H., Hartvigsen, T., & Mamalakis, A.</span> 
+    Correcting Dry/Wet Classification Bias in Precipitation Downscaling via Generative Adversarial Networks. 
+    <span class="pub-venue">Environmental Data Science</span> (Revision submitted).
+  </div>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2024)</span> <span class="pub-authors"><strong>Singh, S.</strong>, Yadav, A., & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1016/j.jhydrol.2023.130596">Univariate and bivariate spatiotemporal characteristics of heat waves, and relative influence of large-scale climate oscillations over India.</a> 
+    <span class="pub-venue">Journal of Hydrology</span>, 628, 130596.
+  </div>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2024)</span> <span class="pub-authors"><strong>Singh, S.</strong>, Goyal, M. K., & Saikumar, E.</span> 
+    <a href="https://doi.org/10.1007/s11269-023-03726-3">Assessing Climate Vulnerability of Ramsar Wetlands through CMIP6 Projections.</a> 
+    <span class="pub-venue">Water Resources Management</span>, 38, 647-669.
+  </div>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors"><strong>Singh, S.</strong>, & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1016/j.atmosres.2023.106754">An innovative approach to predict atmospheric rivers: Exploring convolutional autoencoder.</a> 
+    <span class="pub-venue">Atmospheric Research</span>, 289, 106754.
+  </div>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors"><strong>Singh, S.</strong>, & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1016/j.jclepro.2023.138228">Enhancing climate resilience in businesses: The role of artificial intelligence.</a> 
+    <span class="pub-venue">Journal of Cleaner Production</span>, 418, 138228.
+  </div>
+  
+  <div class="first-author publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors"><strong>Singh, S.</strong>, Goyal, M. K., & Jha, S.</span> 
+    <a href="https://doi.org/10.1080/02626667.2022.2159412">Role of large-scale climate oscillations in precipitation extremes associated with atmospheric rivers: nonstationary framework.</a> 
+    <span class="pub-venue">Hydrological Sciences Journal</span>, 68(3), 395-411.
+  </div>
+
+  <h3>Co-Authored Publications</h3>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2025)</span> <span class="pub-authors">Abdelmoaty, M. H., Papalexiou, S. M., Mamalakis, A., <strong>Singh, S.</strong>, et al.</span> 
+    Does Non-Stationarity Affect GAN-Based Downscaling? Insights from High-Resolution WRF Simulations over the Canadian Prairies. 
+    <span class="pub-venue">Artificial Intelligence for the Earth Systems</span> (Revision submitted).
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2025)</span> <span class="pub-authors">Abdelmoaty, M. H., Papalexiou, S. M., Mamalakis, A., <strong>Singh, S.</strong>, et al.</span> 
+    <a href="https://doi.org/10.1029/2025JH000678">Generative Adversarial Networks for Downscaling Hourly Precipitation in the Canadian Prairies.</a> 
+    <span class="pub-venue">Journal of Geophysical Research: Machine Learning and Computation</span>, 2, e2025JH000678.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2024)</span> <span class="pub-authors">Rautela, K. S., <strong>Singh, S.</strong>, & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1007/s41748-024-00421-0">Resilience to Air Pollution: A Novel Approach for Detecting and Predicting Aerosol Atmospheric Rivers.</a> 
+    <span class="pub-venue">Earth Systems and Environment</span>, 9, 93-115.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2024)</span> <span class="pub-authors">Rautela, K. S., <strong>Singh, S.</strong>, & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1007/s11356-024-34625-8">Aerosol atmospheric rivers: patterns, impacts, and societal insights.</a> 
+    <span class="pub-venue">Environmental Science and Pollution Research</span>, 31, 50537-50559.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2024)</span> <span class="pub-authors">Rautela, K. S., <strong>Singh, S.</strong>, & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1016/j.jenvman.2023.119675">Characterizing the spatiotemporal distribution, detection, and prediction of aerosol atmospheric rivers on a global scale.</a> 
+    <span class="pub-venue">Journal of Environmental Management</span>, 351, 119675.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors">Goyal, M. K., <strong>Singh, S.</strong>, & Jain, V.</span> 
+    <a href="https://doi.org/10.1038/s41598-023-41968-8">Heat waves characteristics intensification across Indian smart cities.</a> 
+    <span class="pub-venue">Scientific Reports (Nature)</span>, 13, 14786.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors">Kumar, N., Patel, P., <strong>Singh, S.</strong>, & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1038/s41598-023-38771-w">Understanding non-stationarity of hydroclimatic extremes and resilience in Peninsular catchments, India.</a> 
+    <span class="pub-venue">Scientific Reports (Nature)</span>, 13, 12524.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors">Meghani, S., <strong>Singh, S.</strong>, Kumar, N., & Goyal, M. K.</span> 
+    <a href="https://doi.org/10.1016/j.gloplacha.2023.104295">Predicting the spatiotemporal characteristics of atmospheric rivers: A novel data-driven approach.</a> 
+    <span class="pub-venue">Global and Planetary Change</span>, 231, 104295.
+  </div>
+  
+  <div class="publication-item">
+    <span class="pub-year">(2023)</span> <span class="pub-authors">Gupta, V., Rakkasagi, S., Rajpoot, S., El Immanni, H. S., & <strong>Singh, S.</strong></span> 
+    <a href="https://doi.org/10.1007/s11600-023-01124">Spatiotemporal analysis of Imja Lake to estimate the downstream flood hazard using the SHIVEK approach.</a> 
+    <span class="pub-venue">Acta Geophysica</span>, 71, 2233-2244.
+  </div>
+
+  <p style="margin-top: 1.5rem;">
+    <a href="https://scholar.google.com/citations?hl=en&user=q4zIJZsAAAAJ" target="_blank">
+      → View complete publication list on Google Scholar
+    </a>
+  </p>
 </section>
 
 <section id="books">
-  <h2>Books & Chapters</h2>
+  <h2>Books & Book Chapters</h2>
   <ul>
-    <li><a href="#">Understanding Atmospheric Rivers Using Machine Learning.</a> Goyal, M.K. & <strong>Singh, S.</strong> (2024) SpringerBriefs in Applied Sciences and Technology.</li>
-    <li><a href="#">Comparison of Probability Distributions for Extreme Value Analysis and Predicting Monthly Rainfall Pattern Using Bayesian Regularized ANN.</a> Vivekanandan, N., <strong>Singh, S.</strong>, & Goyal, M.K. (2023) In Ecosystem Restoration: Towards Sustainability and Resilient Development. Springer.</li>
-    <li><a href="#">Psychological Impacts of COVID-19.</a> <strong>Singh, S.</strong>, Dubey, S., Kumar, N., Goyal, M.K., & Pal, I. (2020) In Integrated Risk of Pandemic: COVID-19 Impacts, Resilience and Recommendations.</li>
+    <li>
+      <strong>Understanding Atmospheric Rivers Using Machine Learning.</strong> Goyal, M. K., & <strong>Singh, S.</strong> (2024). 
+      <em>SpringerBriefs in Applied Sciences and Technology.</em> Springer International Publishing.
+    </li>
+    <li>
+      <strong>Comparison of Probability Distributions for Extreme Value Analysis and Predicting Monthly Rainfall Pattern Using Bayesian Regularized ANN.</strong> 
+      Vivekanandan, N., <strong>Singh, S.</strong>, & Goyal, M. K. (2023). 
+      In <em>Ecosystem Restoration: Towards Sustainability and Resilient Development.</em> Springer.
+    </li>
+    <li>
+      <strong>Psychological Impacts of COVID-19.</strong> <strong>Singh, S.</strong>, Dubey, S., Kumar, N., Goyal, M. K., & Pal, I. (2020). 
+      In <em>Integrated Risk of Pandemic: COVID-19 Impacts, Resilience and Recommendations.</em> Springer.
+    </li>
   </ul>
 </section>
 
 <section id="awards">
-  <h2>Awards & Achievements</h2>
-  <ul>
-    <li>Young Scientist Award, Madhya Pradesh Council of Science and Technology (2021)</li>
-    <li>Best Research Synopsis Award, ICSSR & AIGGPA (2022)</li>
-    <li>Best Poster Presentation, IIT Indore (2022)</li>
-    <li>Second Place, UVA Postdoctoral Research Symposium (2025)</li>
-    <li>Prime Minister Scholarship, Govt. of India (2013)</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Research Projects</h2>
-  <p><strong>Ph.D.:</strong> Understanding Atmospheric Rivers — Characterization, Impacts, and Predictability</p>
-  <p><strong>M.Tech:</strong> Sedimentation Analysis for a Reservoir Using Remote Sensing and GIS</p>
-  <p><strong>B.Tech:</strong> Preparation and Strength Testing of Translucent Concrete Using Optical Fibres</p>
+  <h2>Awards & Recognition</h2>
+  <div class="award-item">
+    <strong>Second Place Award</strong> - UVA Postdoctoral Research Symposium (2025)
+  </div>
+  <div class="award-item">
+    <strong>Best Research Synopsis Award</strong> - ICSSR & AIGGPA (2022)
+  </div>
+  <div class="award-item">
+    <strong>Best Poster Presentation</strong> - IIT Indore Research Symposium (2022)
+  </div>
+  <div class="award-item">
+    <strong>Young Scientist Award</strong> - Madhya Pradesh Council of Science and Technology (2021)
+  </div>
+  <div class="award-item">
+    <strong>Prime Minister Scholarship</strong> - Government of India (2013-2017)
+  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email (UVA): <a href="mailto:wpa8me@virginia.edu">wpa8me@virginia.edu</a></p>
-  <p>Email (Personal): <a href="mailto:shivam0601ce@gmail.com">shivam0601ce@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/shivamsinghhada">https://github.com/shivamsinghhada</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/shivam-singh-hada/">https://www.linkedin.com/in/shivam-singh-hada/</a></p>
-  <p>GScholar: <a href="https://scholar.google.com/citations?hl=en&user=q4zIJZsAAAAJ">https://scholar.google.com/citations?hl=en&user=q4zIJZsAAAAJ</a></p>  
+  <h2>Contact & Links</h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <span class="contact-icon">✉️</span>
+      <div>
+        <strong>UVA Email</strong><br>
+        <a href="mailto:wpa8me@virginia.edu">wpa8me@virginia.edu</a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">📧</span>
+      <div>
+        <strong>Personal Email</strong><br>
+        <a href="mailto:shivam0601ce@gmail.com">shivam0601ce@gmail.com</a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">📚</span>
+      <div>
+        <strong>Google Scholar</strong><br>
+        <a href="https://scholar.google.com/citations?hl=en&user=q4zIJZsAAAAJ" target="_blank">View Profile</a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">💻</span>
+      <div>
+        <strong>GitHub</strong><br>
+        <a href="https://github.com/shivamsinghhada" target="_blank">@shivamsinghhada</a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">🔗</span>
+      <div>
+        <strong>LinkedIn</strong><br>
+        <a href="https://www.linkedin.com/in/shivam-singh-hada/" target="_blank">Connect</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-  © 2025 Shivam Singh | University of Virginia | AI for Climate Research
+  © 2025 Shivam Singh | University of Virginia | Department of Environmental Sciences
+  <br>
+  <small>Postdoctoral Research Associate • AI for Climate Science</small>
 </footer>
 
 </body>
